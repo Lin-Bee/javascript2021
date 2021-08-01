@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .red{color:red;}
+        .blue{color:blue;}
+    </style>
+    <div>
+        <h1>Cities</h1>
+        <ul>
+        <li id = "one" class="red">Seoul</li>
+        <li id = "two" class="red">London</li>
+        <li id = "three" class="red">Newyork</li>
+        <li id = "four" class="red">Tokyo</li>
+        </ul>
+    </div>
+    <button onclick="change()">한글로바꾸고 class파랑하기</button>
+    <script>
+        const ulNode = document.querySelector('ul');
+        console.log(ulNode.textContent);
+
+        //li 텍스트를 한글로 번역하고 색상을 블루로 바꾸기
+        function change(){
+            var textone = document.getElementById("one");
+            textone.innerHTML = "서울";
+            var texttwo = document.getElementById("two");
+            texttwo.innerHTML = "런던";
+            var textthree = document.getElementById("three");
+            textthree.innerHTML = "뉴욕";
+            var textfour = document.getElementById("four");
+            textfour.innerHTML = "도쿄";
+            
+            //클래스 red를 찾아서 blue로 교체를 하던가 아니면 blue를 뒤에 추가하면 되는데....
+
+        }
+
+        //function change(){
+           // 위랑 같은 요소
+           // const one = document.getElementById("one");
+           // const two = document.getElementById("two");
+           // const three = document.getElementById("three");
+           // const four = document.getElementById("four");
+
+           // one.textContent = '서울';
+           // two.textContent = '런던';
+           // three.textContent = '뉴욕';
+           // four.textContent = '도쿄';
+
+           // one.className = 'blue';
+           // two.className = 'blue';
+           // three.className = 'blue';
+           // four.className = 'blue';       
+        //}
+    </script>
+</body>
+</html>

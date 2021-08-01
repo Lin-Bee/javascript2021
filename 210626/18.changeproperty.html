@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>속성이름을 이용한 속성값 변경</h1>
+    <div><a id = "link" href="https://naver.com" target="_blank">네이버로 바로가기</a></div>
+    <button onclick ="changeLink()">구글로 바꾸기</button>
+
+    <script>
+        function changeLink(){
+            var link = document.getElementById("link");
+            link.href = "https://www.google.com";
+            link.innerHTML = "구글로바로가기";
+        }
+    </script>
+</body>
+</html>

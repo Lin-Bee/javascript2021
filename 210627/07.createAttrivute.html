@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attrivute -  스타일 만들기</title>
+</head>
+<body>
+    <h1>요소 노드의 생성</h1>
+    <p id="text">새로운 단락을 생성하여 이 단락 앞에 추가할 것입니다.</p>
+    <button onclick="createNode()">요소 노드 생성!</button>
+
+    <script>
+        var ctn = 0;
+        var ctnnanu = ctn/2;
+        
+        function createNode(){
+            var text = document.getElementById("text");
+            var newAttrivue = document.createAttribute("style");// 스타일이라는 속성추가
+            if(ctnnanu = 0){
+                newAttrivue.value = "color:red";// 짝수는 빨간색으로 설정
+                text.setAttributeNode(newAttrivue); // 해당 요소의 속성추가
+                ctn++;
+            }else if(ctnnanu = 1){
+                newAttrivue.value = "color:blue";// 홀수는 파란색으로 설정
+                text.setAttributeNode(newAttrivue); // 해당 요소의 속성추가
+                ctn++;
+            }
+            console.log(ctnnanu);
+        }
+    </script>
+</body>
+</html>

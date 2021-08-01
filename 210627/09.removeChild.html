@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>removeChild() 메소드</h1>
+    <button onclick="remove()">요소 노드 삭제!</button>
+    <button onclick="remove2()">테이블 노드 삭제!</button>
+    <div id="list">
+        <p>HTML</p>
+        <p id="item">CSS</p>
+        <p>JavaScript</p>
+    </div>
+    <table id="table">
+        <tr><td>테이블1</td></tr>
+        <tr id="test"><td>테이블2</td></tr>
+        <tr><td>테이블3</td></tr>
+    </table>
+
+    <script>
+        function remove(){
+            var parent = document.getElementById("list");
+            var removeItem = document.getElementById("item");
+            parent.removeChild(removeItem);
+        }
+        function remove2(){
+            var parent2 = document.getElementById("table");
+            var removeItem2 = document.getElementById("test");
+            parent2.removeChild(removeItem2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>var obj1 = {name : 'lee'};</p>
+        <p>=</p>
+        <p>var obj1 = {};</p>
+        <p>ob1.name = 'lee';</p>
+    </div>
+    <script>
+        function Person(name){
+            //property - 위에 있는 name과 this.name은 서로 다르다.
+            this.name = name; //this는 여기서만 사용함
+
+            this.setName = function(name){
+                this.name = name;
+            };
+
+            this.getName = function(){
+                return this.name;
+            };
+        }
+
+        //인스턴스의 생성 - 
+        var me = new Person('Lee');
+        console.log(me.getName()); //Lee
+
+        //Classs는 오브젝트 만드는애 -  Object는 class의 실체잖아...?
+        //근데 클래스가 프로퍼티가 됬네
+        //일단은...functiondl class가 맞긴하네
+        //Person이라는 Class고 클래스에 name을 설정하려고 한다고 선언함
+        //각각의 큰 this들이 public --처럼 선언해주는거지...
+        //그중에서 글로벌타입이랑 로컬타입으로 나뉘는게 public과 private의 차이겠구나
+        //Static될때 Person이라는 친구의 name이 lee라고 선언해줌
+    </script>
+</body>
+</html>

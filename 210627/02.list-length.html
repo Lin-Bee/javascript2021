@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>노드 리스트의 length 속성</h1>
+    <ul id="list">
+      <li>첫 번째 아이템이에요!</li>
+      <li>두 번째 아이템이에요!</li>
+      <li>세 번째 아이템이에요!</li>
+    </ul>
+    <p id="text"></p>
+    <button onclick="changeTextColor()">글자색 변경!</button>
+
+    <script>
+        var listItems = document.getElementsByTagName("li");
+        //listItems의 모든 li 선택함
+        document.getElementById("text").innerHTML = "이 노드의 리스트 길이는 " + listItems.length + "개 입니다.";
+
+        //changeTextColor라는 친구한테 적용할거다
+        function changeTextColor(){ //무엇을?
+            //for반복할거다 listItems의 길이 만큼 증가하고\
+            //true값에 부합하는 각각의 listItems의 color가 오렌지가 되어라 
+            for(var i = 0;  i < listItems.length; i++){
+                listItems[i].style.color = "orange";
+                //list내부의 색상은 오렌지가 되어라
+            }
+        }
+        
+    </script>
+</body>
+</html>

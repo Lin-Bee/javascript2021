@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>innerHTML을 이용한 요소의 내용변경</h1>
+    <P id="text">바꿀문장</P>
+    
+    <script>
+        var str = document.getElementById("text");
+        str.innerHTML= "이 문장으로 바뀌었습니다.";
+        
+        //document.getElementById("text").innerHTML= "다시바꾸기";
+    </script>
+</body>
+</html>

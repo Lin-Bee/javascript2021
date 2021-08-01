@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ["김린비", "프론트엔드" , "@lin_bee_" ,true, 0912 ];
+        var arr1 = arr.concat("다섯",[6,7]);
+
+        console.log(arr.concat([2],false,"문자열")); //["김린비", "프론트엔드", "@lin_bee_", true, 912, 2, false, "문자열"]
+        console.log(arr.concat([2],[3,4])); // ["김린비", "프론트엔드", "@lin_bee_", true, 912, 2, 3, 4]
+        console.log(arr.concat("다섯",[6,7])); //["김린비", "프론트엔드", "@lin_bee_", true, 912, "다섯", 6, 7]
+    </script>
+</body>
+</html>

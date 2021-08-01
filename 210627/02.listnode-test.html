@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>노드 리스트의 텍스트 노드</h1>
+    <ul id="list">ul 요소 다음의 텍스트
+    <li>첫 번째 아이템이에요!</li>첫 번째 li 요소 다음의 텍스트
+    <li>두 번째 아이템이에요!</li>두 번째 li 요소 다음의 텍스트
+    <li>세 번째 아이템이에요!</li>세 번째 li 요소 다음의 텍스트
+    </ul>
+
+    <script>
+        //아이디가 lsit인 요소의 자식 찾기
+        var listItems = document.getElementById("list").childNodes;
+        
+        //자식 노드 중 첫번째 노드의 값을 출력함
+        document.write(listItems[0].nodeValue + "<br/>");
+        //자식 노드 중 두번째 노드의 첫번째자식을 값을 출력함
+        document.write(listItems[1].firstChild.nodeValue + "<br/>");
+        //자식 노드 중 세번째 노드의 값을 출력함
+        document.write(listItems[2].nodeValue + "<br/>");
+
+        console.log("listItems[0] 는" + listItems[0].nodeValue);
+        console.log("listItems[1] 는" + listItems[1].firstChild.nodeValue);
+    </script>
+</body>
+</html>

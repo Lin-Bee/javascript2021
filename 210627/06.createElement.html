@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement() - div 같은거 가능</title>
+</head>
+<body>
+    <h1>요소 노드의 생성</h1>
+    <p id="text">새로운 단락을 생성하여 이 단락 앞에 추가할 것입니다.</p>
+    <button onclick="createNode()">요소 노드 생성!</button>
+    
+    <script>
+        var cnt = 0;
+        function createNode(){
+            var criteriaNode = document.getElementById("text");
+            
+            if(cnt < 1){
+                var newNode = document.createElement("p"); // 새로운 <p> 요소를 생성함
+                newNode.innerHTML = "새롭게 추가";
+                document.body.insertBefore(newNode, criteriaNode);
+                cnt++;
+            }else{
+                alert("한번만 추가할 수 있습니다.");
+            }
+        }
+    </script>
+</body>
+</html>

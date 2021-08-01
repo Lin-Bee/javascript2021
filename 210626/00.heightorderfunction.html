@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수를 인자로 전달받고 함수를 반환하는 고차함수
+        function makeCounter(predicate){  // predicate이 파라미터
+            //자유변수 num의 상태는 유지되어야한다.
+            let num = 0;
+            //클로저, num의상태를 유지한다.
+            return function (){
+            //클로저 return을 통해 밖으로 반환한 함수(height order function)를쓰는거
+            //predicate는 자유변수 num의 상태를 변화시킨다.
+                num = predicate(num);
+                return num;
+            };
+        }
+
+        function increase(n){return ++n;}
+        function decrease(n){return --n;}
+
+        const increaser = makeCounter(increase);
+        const decreaser = makeCounter(decrease);
+        //increaser는 객체 실행되는 구문은 16번
+        console.log(increaser());
+        console.log(increaser());
+        console.log(increaser());
+
+        console.log(decreaser());
+        console.log(decreaser());
+        console.log(decreaser());
+    </script>
+</body>
+</html>
