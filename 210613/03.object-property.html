@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-property</title>
+</head>
+<body>
+    <h1>객체의 프로퍼티 참조</h1>
+    <script>
+        var person = {
+            name : "홍길동",                      //이름프로퍼티 정의
+            birthday : "930219",                 //생년월일프로퍼티 정의
+            pld : "1234597",                     //개인 id 프로퍼티 정의
+            fullId: function(){                  //생년월일과 개인 id를 합쳐 주민번호 반환
+                return this.birthday + "-" + this.pld;
+            }
+        };
+
+        console.log(person.name);
+        console.log(person.fullId());
+        console.log(person["name"]);
+    </script>
+</body>
+</html>

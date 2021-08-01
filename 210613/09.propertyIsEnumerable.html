@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propertyIsEnumerable</title>
+</head>
+<body>
+    <h1>propertyIsEnumerable()</h1>
+
+    <script>
+        function Dog(color, name, age, family) {
+          this.color = color;
+          this.name = name;
+          this.age = age;
+          this.family = family;
+          this.breed = function(){return this.color + " " + this.family;}
+        }
+        var myDog = new Dog("검정색","쿠로",5,"도베르만");
+
+        Object.defineProperty(myDog, 'name',{enumerable : false});
+
+        console.log(myDog.propertyIsEnumerable("color"));
+        console.log(myDog.propertyIsEnumerable("name"));
+        console.log(myDog.propertyIsEnumerable("age"));
+        console.log(myDog.propertyIsEnumerable("family"));
+    </script>
+</body>
+</html>

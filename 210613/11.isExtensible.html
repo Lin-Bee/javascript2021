@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isExtensible()</title>
+</head>
+<body>
+    <h1>isExtensible()</h1>
+    <script>
+        var day = new Date();
+
+        //객체 day에 새롱운 프로퍼티를 추가할 수 있는지 검사
+        console.log(Object.isExtensible(day));
+        // 색로운 프로퍼티 추가 하는걸 막아봅시다.
+        var myDay = Object.preventExtensions(day);
+
+        console.log(Object.isExtensible(day));
+
+        //자바스크립트는undiifinde와 리터널 제외 다 객체
+        //스크립트 대부분들은 프로토타입 객체를 상속받음
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object.create()</title>
+</head>
+<body>
+    <h1>object.create()</h1>
+    <script>
+        var obj = Object.create(null,{         //null 프로토타입을 사용하여 새로운 객체
+            x:{value : 100, enumerable:true},  //x좌표를 나타내는 속성
+            y:{value : 200, enumerable:true}   //y좌표를 나타내는 속성
+        });
+
+        console.log(obj.x); // x값 반환
+        console.log(Object.getPrototypeOf(obj)); // 객체의 프로토타입 반화
+    </script>
+</body>
+</html>

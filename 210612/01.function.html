@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역변수와 전역변수</title>
+</head>
+<body>
+    <h1>지역변수와 전역변수</h1>
+    <p>변수에는 전역변수 와 지역변수가 존재한다.</p>
+    <p>특정변수안에 갇혀있는게 지역변수</p>
+    <p>특정변수안에 갇혀있지 않은게 전역변수</p>
+    <div>
+        <h1>지역변수</h1>
+        <script>
+            function localNum() {
+             var num = 10;	// 지역 변수 num에 숫자 10을 할당함.
+             document.write("함수 내부에서 변수 num의 타입은 " + typeof num + "입니다.<br>");
+            }
+            localNum();			// 함수 localNum()을 호출함.
+            document.write("함수의 호출이 끝난 뒤 변수 num의 타입은 " + typeof num + "입니다.");
+          </script>
+    </div>
+    <div>
+        <h1>전역변수</h1>
+        <script>
+            //전체가 글로벌 스코프 펑션 내부가 로컬스코프
+            var num = 10;	// 전역 변수 num을 선언함.
+            function globalNum() {
+             document.write("함수 내부에서 변수 num의 값은 " + num + "입니다.<br>");
+             num = 20;	// 전역 변수 num의 값을 함수 내부에서 변경함.
+            }
+            globalNum();	// 함수 globalNum()을 호출함.
+            document.write("함수의 호출이 끝난 뒤 변수 num의 값은 " + num + "입니다.");
+          </script>
+    </div>
+    <div>
+        <h1>자동으로 선언되는 전역 변수</h1>
+        <script>
+            function globalNum(){
+                num = 10; // var 키워드를 사용하지 않고 변수 num을 선언
+                document.write("함수 내부에서 변수 num의 값은" + num + "입니다.<br/>");
+            }
+            globalNum();   //함수 globalNum()을 호출함.
+            document.write('함수의 호출이 끝난 뒤 변수 num의 값은' +num + "입니다.");
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object.defineProperty-test</title>
+</head>
+<body>
+    <p>geeter는 어딘가에서 가지고 온다.</p>
+    <script>
+        var gildong = {age : 18};
+        console.log(gildong.age);        //18
+
+        Object.defineProperty(
+            gildong, "americanAge",{
+                get : function(){
+                    return this.age - 1;  //17
+                }
+            }
+        );
+        console.log(gildong.americanAge);
+        console.log("---------------------------");
+    </script>
+    
+    <p>seeter는 어딘가에서 가지고 온다.</p>
+    <script>
+        var gildong = {age : 18};
+        gildong.age = 20;
+        console.log(gildong.age);   //20
+
+        Object.defineProperty(
+            gildong, "changeAge",{
+                set : function(n){
+                    this.age = this.age - n;
+                }
+            }
+        );
+        gildong.changeAge = 5;
+        console.log(gildong.age);  //15
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Dog(color, firstName, lastName, family, age){
+            this.color = color;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.family = family;
+            this.age = age;
+            this.fullName = function(){return this.firstName + " " + this.lastName;};
+        }
+
+        Dog.prototype.breed = function(){return this.color + " " + this.family};
+
+        let frDog = new Dog(" 갈색","강","초코","푸들",2);
+        let myDog = new Dog(" 흰색","김","두부","포메리안",4);
+        
+
+        console.log(frDog.fullName() + frDog.breed());
+        console.log(myDog.fullName() + frDog.breed());
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나머지 매개변수</title>
+</head>
+<body>
+    <h1>나머지 매개변수</h1>
+    
+    <script>
+        function mage1(){
+            var firstNum = arguments[0]; //첫번째 인수에서
+            for(var i = 0; i < arguments.length-1; i++) {//두번째 부터 마지막 인수까지
+                firstNum -= arguments[i+1]; //뺌
+            }
+            return firstNum;
+        }
+        document.write('10 - 2 - 3 =' + mage1(10,2,3) + '</br>');
+        document.write('10 - 1 - 2 - 7 =' + mage1(10,1,2,7) + '</br>');
+    </script>
+
+<script>
+    document.write('익스지원안됨 </br>');
+    // 첫 번째 인수를 변수 firstNum에 저장하고 나머지 인수들은 배열 restArgs에 저장함.
+    function mage2(firstNum, ...restArgs){
+        for(var i = 0; i < arguments.length-1; i++) {//두번째 부터 마지막 인수까지
+            firstNum += arguments[i+1]; //뺌
+        }
+        return firstNum;
+    }
+    document.write('10 + 2 + 3 =' + mage2(10,2,3) + '</br>');
+    document.write('10 + 1 + 2 + 7 =' + mage2(10,1,2,7) + '</br>');
+</script>
+</body>
+</html>

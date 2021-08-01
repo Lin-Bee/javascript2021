@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미리선언된 전역함수</title>
+</head>
+<body>
+    <h1>미리선언된 전역함수</h1>
+    <h2>eval() 함수</h2>
+    <script>
+        var x = 10, y = 20;
+        var a = eval("x + y");
+        var b = eval("y * 3");
+        document.write(a + "<br>" + b);
+    </script>
+
+    <div>
+        <h2>isFinite() 함수</h2>
+        <script>
+        document.write(isFinite(123) + "<br>");
+        document.write(isFinite(123e100) + "<br>");
+        document.write(isFinite(0) + "<br>");
+        document.write(isFinite(true) + "<br>");
+        document.write(isFinite(false) + "<br>");
+        document.write(isFinite(null) + "<br>");
+        document.write(isFinite("123") + "<br>");
+        document.write(isFinite("") + "<br>");
+        document.write(isFinite("문자열") + "<br>");
+        document.write(isFinite(undefined) + "<br>");
+        document.write(isFinite(NaN));
+        </script>
+    </div>
+
+    <div>
+        <h2>isNaN() 함수</h2>
+        <script>
+            console.log(isNaN(123));
+            console.log(isNaN(123e100));
+            console.log(isNaN(0));
+            console.log(isNaN(true));
+            console.log(isNaN(false));
+            console.log(isNaN(null));
+            console.log(isNaN("123"));
+            console.log(isNaN(""));
+            console.log(isNaN("문자열"));
+            console.log(isNaN(undefined));
+            console.log(isNaN(NaN));
+        </script>
+    </div>
+
+    <div>
+        <h2>parseFloat() 함수</h2>
+        <script>
+            console.log("parseFloat() 함수");
+            console.log(parseFloat("123"));
+            console.log(parseFloat("123e100"));
+            console.log(parseFloat("0"));
+            console.log(parseFloat("123.000"));
+            console.log(parseFloat("123.456"));
+            console.log(parseFloat("12 34 56"));
+            console.log(parseFloat("123"));
+            console.log(parseFloat("123 초콜릿"));
+            console.log(parseFloat("초콜릿 1234"));
+        </script>
+    </div>
+
+    <div>
+        <h2>parseInt() 함수</h2>
+        <script>
+            console.log("parseInt() 함수");
+            console.log(parseInt("123"));
+            console.log(parseInt("123e100"));
+            console.log(parseInt("0"));
+            console.log(parseInt("123.000"));
+            console.log(parseInt("123.456"));
+            console.log(parseInt("12 34 56"));
+            console.log(parseInt("123"));
+            console.log(parseInt("123 초콜릿"));
+            console.log(parseInt("초콜릿 1234"));
+        </script>
+    </div>
+    
+    <div>
+        <h2>부호화 하기! - DB 주고받을때 씀</h2>
+        <p>encodeURL(부호화할 URL)</p>
+        <p>encodeURLComponent(부호화할 URL)</p>
+        <script>
+            var uri = "http://google.com/search.php?name=홍길동&city=서울";
+            var enc1 = encodeURI(uri);
+            var enc2 = encodeURIComponent(uri);
+            console.log(enc1); //기본 uri는 남겨두고 검색 영역만 수정
+            console.log(enc2); //전부 부호화 시켜서 전송
+        </script>
+    </div>
+
+    <div>
+        <h2>부호화한거 다시 풀기! - DB 주고받을때 씀</h2>
+        <p>decodeURL(디코더할 URL)</p>
+        <p>decodeURLComponent(디코더할 URL)</p>
+        <script>
+            var uri = "http://google.com/search.php?name=홍길동&city=서울";
+            console.log('부호화 디코더');
+            var enc3 = encodeURI(uri);
+            var enc4 = encodeURIComponent(uri);
+            var enc3 = decodeURI(uri);
+            var enc4 = decodeURIComponent(uri);
+            console.log(enc3); //기본 uri는 남겨두고 검색 영역만 수정
+            console.log(enc4); //영문빼고 전부 부호화 시켜서 전송
+        </script>
+    </div>
+
+    <div>
+        <h2>escape()와 unescape() 함수</h2>
+        <p>이런게 있으니 function만들면 안되는 애 </p>
+        <script>
+            var str = "Hello!	World ?#$";
+            var esc = escape(str);
+            var une = unescape(esc);
+            document.write(esc + "<br>" + une);
+        </script>
+    </div>
+
+    <div>
+        <h2>Number() 함수</h2>
+        <script>
+            console.log(Number("123"));
+            console.log(Number("123.000"));
+            console.log(Number("123.456"));
+            console.log(Number("12 34 56"));
+            console.log(Number("123 초콜릿"));
+            console.log(Number(true));
+            console.log(Number(false));
+            console.log(Number(new Date()));
+            console.log(Number(null));
+        </script>
+    </div>
+
+    <div>
+        <h2>String</h2>
+        <script>
+            console.log(String(123));
+            console.log(String(123.456));
+            console.log(String("123"));
+            console.log(String(new Date()));
+            console.log(String(null));
+            console.log(String(true));
+            console.log(String(false));
+            console.log(String(Boolean(1)));
+            console.log(String(Boolean(0)));
+        </script>
+    </div>
+</body>
+</html>
