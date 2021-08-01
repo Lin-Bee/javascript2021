@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>묵시적 타입 변환</h1>
+    <p id="result"></p>
+
+    <script>
+        var result = 10 + "문자열";
+        //문자열 연결을 위해 숫자 10(int)이 문자열(string)로 변환
+        document.getElementById("result").innerHTML = result + "<br/>";
+
+        var result = 10 * "문자열";
+        //nan
+        document.getElementById("result").innerHTML += result + "<br/>";
+
+        result = "3" * "5";
+        //곱셈연산을 위해 두 문자열이 모두 숫자로 변환
+        document.getElementById("result").innerHTML += result + "<br/>";
+
+        result = 1 - "문자열";
+        //nan
+        document.getElementById("result").innerHTML += result + "<br/>";
+    </script>
+</body>
+</html>

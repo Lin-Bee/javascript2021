@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output02</title>
+</head>
+<body>
+    <h1>HTML DOM 요소를 이용한 innerHTML 프로퍼티</h1>
+
+        <p id="text">바뀔영역은 id'text'</p>
+        <script>
+            var str = document.getElementById("text");
+            str.innerHTML = "<button id='return'>바꿀내용</button>";
+            // =
+            //document.getElementById("text").innerHTML = "<button id='return'>바꿀내용</button>";
+        </script>
+</body>
+</html>

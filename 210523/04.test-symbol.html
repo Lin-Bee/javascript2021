@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>심볼 타입</h1>
+    <p id="result"></p>
+    <script>
+       var sym = Symbol("javascript"); //심볼타입
+       var symObj = Object(sym);       //객체타입
+
+       document.getElementById("result").innerHTML=
+       (typeof sym) + "<br/>" + (typeof symObj);
+    </script>
+</body>
+</html>

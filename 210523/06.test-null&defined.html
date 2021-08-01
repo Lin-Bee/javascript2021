@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>null과 undefined</h1>
+    <p id="result"></p>
+
+    <script>
+        var num; // 초기화(정의)하지 않았으므로 undefinde 값을 반환함
+        var str = null; // object 타입의 null 값
+        var str1 = "";
+
+        //정의되지 않은 변수에 접근하면 undefined 값을 반환함
+        document.getElementById("result").innerHTML=
+        (typeof num) + "<br/>" + (typeof str)+ "<br/>" + (typeof str1);
+        // undefined                 object                 string
+    </script>
+</body>
+</html>

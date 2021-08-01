@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>명시적 타입 변환</h1>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("result").innerHTML = Number("10") + "<br/>"; //10
+        document.getElementById("result").innerHTML += String(true) + "<br/>"; //"true"
+        document.getElementById("result").innerHTML += Boolean(0) + "<br/>"; //false
+        document.getElementById("result").innerHTML += Object(3) + "<br/>" + "<br/>"; //new Number(3)
+        
+        document.getElementById("result").innerHTML += false.toString() + "<br/>";
+        document.getElementById("result").innerHTML += String(true); 
+    </script>
+</body>
+</html>

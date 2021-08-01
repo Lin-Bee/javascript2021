@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output07</title>
+</head>
+<body>
+    <p>ES06 기준으로 작업중입니다.</p>
+    <div id="counter">0</div>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+
+    <script>
+        //에러발생코드
+        const $counter = document.getElementById('counter');
+        const $increase = document.getElementById('increase');
+        const $decrease = document.getElementById('decrease');
+
+        let num = 0;
+        const render = function () { $counter.innerHTML = num; };
+
+        $increase.onclick = function(){
+            num++;
+            console.log('increase버튼 클릭', num);
+            render();
+        }
+        $decrease.onclick = function(){
+            num--;
+            console.log('decrease버튼 클릭', num);
+            render();
+        }
+    </script>
+</body>
+</html>
