@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for / of 순회하는 방식</h1>
+    <script>
+        var arr = [3,4,5];
+
+        //arr[] i값을 그대로 불러온다 길이를 보세요 3 이니까 3개까지만 불러올 수 있음
+        for (var i = 0; i < arr.length; i++){
+            console.log(arr[i] + "");
+        }
+        console.log(arr[i] + "--위와 같은 동작을 하는 for/of 문--");
+        for(var value of arr){ //위와 같은 동작을 하는 for/of 문
+            console.log(value + "");
+        }
+    </script>
+
+<h1>for / of 순회하는 방식</h1>
+<script>
+    var arr = new Set([1,1,2,2,3,3]);
+
+    for(var value of arr){
+        console.log(value + "");
+    }    
+</script>
+</body>
+</html>

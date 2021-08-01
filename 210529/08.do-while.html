@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>do/while 문</h1>
+        <script>
+            var i = 1;
+            var j = 1;
+
+            while (i > 3){ //변수 i의 초기값이 1이므로 이 while 문은 실행되지 않음
+                console.log("i = "+ (i++));
+            }
+            do{ //변수 j의 초기값이 1이므로 이 do/while문은 단 한번말 실행됨
+                console.log("j = " + (j++));
+            }while(j > 3);
+        </script>
+    </div>
+    <div>
+        <h1>do/while문을 활용해서 0,1,2뽑아보기</h1>
+        <script>
+            i = 0;
+            
+            do{//
+                console.log("i =" + i);
+                i++;
+            } while(i < 3);
+        </script>
+    </div>
+    <div>
+        <h1>do/while문을 활용해서 10 9 8 ...2 1뽑아보기</h1>
+        <script>
+            i = 10;
+            do{//
+                console.log(i);
+                i--;
+            } while(i > 0);
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>break 문</h1>
+        <script>
+            let lectures = ["html","css","자바스크립트","php"];
+            let topic = "자바스크립트";
+
+            for (var i = 0; i < lectures.length; i++){
+                if(lectures[i] == topic){
+                    console.log(topic + "과목은" + (i+1) +"번째 과목입니다.");
+                    break;
+                }
+            }
+            //for lectures 의 배열[인덱스값들,인덱스값들,인덱스값들,인덱스값들]이 있을때
+            //배열값의 length 값은 4개 보다는 작을때까지는 증가한다.
+            // 만약 topic 이름이 자바스크립트일때  몇번ㅉ ㅐ과목인지 불러오고 멈춰라
+        </script>
+    </div>
+
+    <div>
+        <h1>늘어나는 갯수의 별</h1>
+        <script>
+            for(let i = 1; i <=5; i ++){ //다섯줄이 반복된다.
+                for(let  j = i; j >=1; j--){ // 1번째 줄일! 1 두번째 줄일때 2
+                    document.write('☆');
+                }
+                document.write('<br/>');
+            }
+        </script>
+    </div>
+
+    <div>
+        <h1>작아지는 갯수의 별</h1>
+        <script>
+            for(let i = 1; i <=5; i++){//다섯줄이 반복된다.
+                for(let j = i; j<= 5; j++){ // 1번째 줄일떼5
+                    document.write('☆');
+                }
+                document.write('<br/>');
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>continue 문</h1>
+    <script>
+        var exceptNum = 3;
+
+        for (var i = 0; i <= 100; i++){
+            if (i % exceptNum == 0){ // exceptNum의 배수를 출력하지 않음
+                continue;
+            }
+            console.log(i+"");
+        }
+    </script>
+    <div>
+        <h1>continue 문 홀수만 불러와라</h1>
+        <script>
+            gugudan:
+            for(var i = 2; i <= 9; i++){
+                dan:
+                for(var j = 2; j <= 9; j++){
+                    if((i*j) % 2 == 0)
+                    continue dan;
+                    document.write(i + "*" + j + "=" + (i*j) + "<br/>");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

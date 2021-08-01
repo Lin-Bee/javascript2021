@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>여러개의 case절을 가지는 switch문</h1>
+        <script>
+            var day = new Date().getDay(); //오늘의 요일을 반환함(일요일 0 토요일 6)
+
+            switch (day){
+                case 1: //월요일인 경우
+                case 2: //화요일인 경우
+                case 3: //수요일인 경우
+                case 4: //목요일인 경우
+                default: //0부터 6까지의 값이 아닌경우
+                    console.log("월화수목금퇼이 아닐때");
+                    break;
+                //----------- 뒤에서 ;으로 안닫으면 or처리가 됨----------------//    
+                case 5: //금요일인 경우
+                    console.log("으으 오늘 만 버텨");
+                    break;
+                case 6: "이번주는 너무 길다"//토요일인 경우
+                case 0: //일요일인 경우\
+                    console.log("뭐했다고 주말끝남?");
+                    break;
+            }
+        </script>
+    </div>
+    <div>
+        <h1>switch 구문을 ifelse구문으로 바꾸기</h1>
+        <script>
+            var day = new Date().getDay();
+            
+            console.log(typeof day);
+            
+            if (day == 0){
+                console.log("뭐했다고 주말이 끝난거지?");
+            }else if (day == 6){
+                console.log("오늘은 토요일이구나");
+            }else{
+                console.log("아직 평일이래");
+            }
+        </script>
+    </div>
+</body>
+</html>

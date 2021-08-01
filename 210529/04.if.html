@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>if 문</h1>
+        <script>
+            var x=9, y=12;
+            if (x==y) {
+                document.write("x와 y는 같습니다.");
+                console.log("x와 y는 같습니다.");
+            }
+            if (x < y) {
+                document.write("x는 y보다 작습니다.");
+                console.log("x는 y보다 작습니다.");
+            }
+            if (x > y) {
+                document.write("x는 y보다 큽니다.");
+                console.log("x는 y보다 큽니다");
+            }
+        </script>
+    </div>
+    <div>
+        <h1>else문</h1>
+        <script>
+            var x=9, y=12;
+            
+            if (x==y) {
+                document.write("x와 y는 같습니다.");
+                console.log("x와 y는 같습니다.");
+            } else{
+                if (x < y){
+                    document.write("x는 y보다 작습니다.");
+                    console.log("x는 y보다 작습니다.");
+                } else{
+                    document.write("x는 y보다 큽니다.");
+                    console.log("x는 y보다 큽니다.");
+                }
+            }
+        </script>
+    </div>
+    <!--div>
+        <h1>또다른 else 절</h1>
+        <script>
+            let year = prompt('ECMAScrip=2015 명세는 몇년도에 출판되었을까요','');
+            if (year == 2015){
+                alert("정답입니다.");
+            }else{
+                alert("아닙니다 2015년입니다.");
+            }
+        </script>
+    </div-->
+    <div>
+        <h1>else if문</h1>
+        <script>
+            var x=9, y=12;
+            
+            if (x==y) {
+                document.write("x와 y는 같습니다.");
+                console.log("x와 y는 같습니다.");
+            } else if (x <= y) {
+                document.write("x는 y보다 작습니다.");
+                console.log("x는 y보다 작습니다.");
+            } else if (x > y) {
+                document.write("x는 y보다 큽니다.");
+                console.log("x는 y보다 큽니다.");
+            }
+        </script>
+    </div>
+    <div>
+        <h1>삼항연산자로 해보는 if else</h1>
+        <script>
+            let age = prompt('나이를 입력해주세요','');
+            let accessAllowed = (age > 18) ? true:false;
+
+            alert(accessAllowed);
+        </script>
+    </div>
+</body>
+</html>
