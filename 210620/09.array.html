@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array.isArray()</h1>
+    <p>Array.isArray() 메소드는 전달받은 값이 Array 객체인지 아닌지를 검사합니다.</p>
+    <script>
+        console.log(Array.isArray([]));   //true
+        console.log(Array.isArray(new Array()));  //true
+
+        console.log(Array.isArray(123));  //false
+        console.log(Array.isArray("Array"));  //false
+        console.log(Array.isArray(true));  //false
+    </script>
+
+    <!---ES6에 추가된 친구-->
+    <h1>Array.from()</h1>
+    <p>Array.from() 
+        1. 배열과 비슷한 객체(array-like objects) : length 프로퍼티와 인덱스 된 요소를 가지고 있는 객체
+        2. 반복할 수 있는 객체(iterable objects) : Map과 Set 객체 및 문자열과 같이 해당 요소를 개별적으로 선택할 수 있는 객체</p>
+    <script>
+        function arrayFrom() {
+            return Array.from(arguments); //arguments는 지역변수(인수)
+        }
+        console.log(Array.from(arrayFrom(1, 2, 3)));	// [1, 2, 3]
+        
+        var myMap = new Map([[1, 2], [3, 4]]);
+        console.log(Array.from(myMap));					// [1, 2, 3, 4]
+        
+        console.log(Array.from("JavaScript"));			// [J,a,v,a,S,c,r,i,p,t]
+    </script>
+
+    <!--ES6에 추가된 친구-->
+    <h1>Array.of() 메소드</h1>
+
+    <script>
+    console.log(new Array(10) + "<br>");		// 10개의 배열 요소를 가지는 빈 배열을 생성함.
+    console.log(Array.of(10));				// 한 개(숫자 10)의 배열 요소를 가지는 배열을 생성함.
+    </script>
+</body>
+</html>

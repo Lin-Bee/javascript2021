@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Arrow Function
+        //ESS
+        //var pow = function (x) {return x*x};
+        //console.log(pow(10)); //100
+        //위아래가 같아욤
+        //ES6
+        let pow = x => x*x;
+        console.log(pow(10)); //100
+
+        //ESS
+        let arr = [1, 2, 3];
+        let pow2 = arr.map(function (x){
+            return x*x;
+        });
+        console.log(pow2);
+
+        //ES6
+        let arr2 = [1, 2, 3];
+        let pow3 = arr2.map(x => x*x);
+        console.log(pow3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //es5
+        function pfIxer(pf){
+            this.pfIxer = pf;
+        }
+        pfIxer.prototype.prefixArray = function(arr){
+            //prototype이 없어도 되는데 왜 있나요? - 함수나 변수명을 지정할때 내장 객체하고 헷갈릴까봐
+            //A........
+            return arr.map(function(x){
+                return this.prefix + '' + x; //B.........
+            });
+        };
+
+        var pre = new pfIxer('안녕하세요');
+        console.log(pre.prefixArray(["김씨", "이씨", "박씨"]));
+
+    </script>
+    <script>
+        //es6
+        function pfIxer(pf){
+            this.pfIxer = pf;
+        }
+        pfIxer.prototype.prefixArray = function(arr){
+            //A........
+            return arr.map(x => this.pfIxer + '' + x);
+        };
+
+        var pre = new pfIxer('안녕하세요');
+        console.log(pre.prefixArray(["김씨", "이씨", "박씨"]));
+
+    </script>
+</body>
+</html>

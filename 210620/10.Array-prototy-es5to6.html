@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--script>
+        //es5
+        var obj = {
+            name : 'lee',
+            sayHi: function() {
+                console.log('Hi!' + this.name);
+            }
+        };
+        obj.sayHi();
+
+        //es6
+        const obj = {
+            name: 'lee',
+            sayHi(){
+                console.log('Hi!' + this.name);
+            }
+        };
+        obj.sayHi;
+    </script-->
+
+    <script>
+        //es5
+        var parent = {
+            name : 'parent',
+            sayHi: function() {
+                console.log('Hi!' + this.name);
+            }
+        };
+
+        //Object 원형으로 프로토타입 패턴 상속
+        var child = Object.create(parent);
+        child.name = 'child';
+        parent.sayHi();
+        child.sayHi();
+        //----------------------------------------
+        //es6
+        var parent2 = {
+            name : 'parent2',
+            sayHi: function() {
+                console.log('Hi!' + this.name);
+            }
+        };
+        //바로 바인딩할수있는 __ __ 언더바
+        const child2 = {
+            //child 객체의 프로토 타입 객체에 parent객체를 바인딩하여 상속을 구현한다.
+            __proto__: parent2,
+            name: 'child2'
+        }
+        parent2.sayHi();
+        child2.sayHi();
+
+    </script>
+</body>
+</html>

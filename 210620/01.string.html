@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "abcDEfabc";
+        
+        console.log(str.indexOf('abc'));    // 0
+        console.log(str.indexOf('abcd'));   // -1
+        console.log(str.indexOf('f',2));   // 5
+
+        //마지막 자리를 반환해라
+        console.log(str.lastIndexOf('abc'));//6
+        console.log(str.lastIndexOf('D'));  //3
+        console.log(str.lastIndexOf('d'));  //-1
+        console.log(str.lastIndexOf('c'));  //8
+
+        if(str.indexOf('abc')<0){
+            console.log('찾는 값이 없습니다.');
+        }else {
+            console.log('찾는값이 있습니다.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문자열 추출</h1>
+    <script>
+        //slice
+        var w = "abcdef2345678";
+        var gender = w.substr(w.slice(6));
+
+        console.log(w.slice(2,6));
+        console.log(w.slice(-4,-2));
+        console.log(w.slice(2));
+
+        //substring 시작자리부터 끝자리
+        console.log(w.substring(2,6));
+
+        //substr 시작자리부터 몇자리자를래?
+        console.log(w.substr(2,4));
+
+        if(gender%2 == 0){
+            console.log('여자입니다');
+        }else{
+            console.log('남자입니다');
+        }
+    </script>
+</body>
+</html>

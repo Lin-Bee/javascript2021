@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setFullYear() 메소드</h1>
+
+    <script>
+      var date = new Date();
+      date.setFullYear(1982, 1, 19);	// 자바스크립트에서 2월은 1임.
+      document.write(date.getFullYear() + "<br>");	// 1982
+      document.write(date.getMonth() + "<br>");		// 1
+      document.write(date.getDate() + "<br>");		// 19
+      document.write(date);
+    </script>
+
+    <h1>setDate() 메소드</h1>
+
+    <script>
+    var date = new Date();
+    date.setDate(10);				// Date 객체의 일자 값을 10일로 설정함.
+    document.write(date + "<br>");
+    date.setDate(40);				// 40일을 설정하면, 초과되는 일수만큼 다음달로 넘어감.
+    document.write(date);
+    </script>
+</body>
+</html>

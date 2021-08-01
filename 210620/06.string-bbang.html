@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문자열 추출</h1>
+    <script>
+        let str = "자바스크립트는 너무 어려워요! 멋지고 유용하지만.";
+
+        console.log(str.split());    //구분자를 명시하지 않으면 아무런 동작도 안함
+        console.log(str.split(""));  //한문자("")씩나눔
+        console.log(str.split(" ")); //띄어쓰기 (" ")를기준으로나눔
+        console.log(str.split("!")); //느낌표를 기준으로 나눔
+
+        //ip date cellnum등으로 나뉨
+        var beforePn = "000-1234-4567"
+        var beforeIp = "127 .0 .1 .0"
+        var beforeDate = "2021-06-00"
+        var beforeSSN = "990909-2345678"
+        var beforeAddr = "부산 부산진구 부전동 229-1";
+        var beforeEmail = "test@asdf.com";
+
+
+        console.log(beforePn.split("-")); //느낌표를 기준으로 나눔
+        console.log(beforeIp.split(" ")); //띄어쓰기 (" ")를기준으로나눔
+        console.log(beforeDate.split("-")); //
+        console.log(beforeSSN.split("-")); //
+        console.log(beforeAddr.split(" "));
+        console.log(beforeEmail.split("@")); //
+    </script>
+</body>
+</html>

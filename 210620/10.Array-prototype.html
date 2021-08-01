@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>push</h1>
+    <!--script>
+        var arr = [1, true, "JavaScripts"];
+
+        console.log(arr.length);
+        arr.push("자바스크립트");
+        console.log(arr.length);	// 4
+        console.log(arr);		    // [1,true,JavaScript,자바스크립트]
+
+        arr.push(2, "거짓");
+        console.log(arr.length);	// 6
+        console.log(arr);			// [1,true,JavaScript,자바스크립트,2,거짓]
+    </script>
+
+    <h1>prop</h1>
+    <script>
+        var prefix = 'prop';
+        var i = 0;
+
+        var obj = {};
+
+        obj[prefix + '-' + ++i] = i;
+        obj[prefix + '-' + ++i] = i;
+
+        console.log(obj);
+
+        
+    </script-->
+
+    <h1>for문 - prop</h1>
+    <!--script>
+        var forprop = 'prop';
+        var obj = {};
+        for(i = 1; i < 11; ++i){
+            obj[forprop + '-' + i] = i;
+
+            console.log(obj);
+        };
+    
+    </script-->
+
+    <script>
+        //es6
+        var forprop = 'prop';
+        let i = 0;
+        
+        const obj = {
+            [`${forprop} - ${++i}`] : i
+        };
+        console.log(obj);
+    </script>
+</body>
+</html>
