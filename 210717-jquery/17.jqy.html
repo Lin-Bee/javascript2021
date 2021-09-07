@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <ul>
+        <li>0 첫번째 아이템</li>
+        <li>1 두번째 아이템</li>
+        <li>2 세번째 아이템</li>
+        <li>3 네번째 아이템</li>
+    </ul>
+    <p id="text"></p>
+    <button id="btn01">기능</button>
+    <script>
+        $(function(){
+            $("#btn01").on("click", function(){ 
+                $("li").slice(1).css({"border":"2px solid red"}); //1번 에 있는 아이를 제외하고 적용해라
+            });
+        });
+    </script>
+</body>
+</html>

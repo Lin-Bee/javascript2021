@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity=""></script>
+</head>
+<body>
+    <h1>test1</h1>
+    <h2>test2</h2>
+    <p>p tag blabla~</p>
+    <ul id="dest">
+        <li>seoul</li>
+        <li>
+            <ul id="france">
+                <li>paris</li>
+            </ul>
+        </li>
+        <li class="promo">jeju</li>
+        <li class="promo1">jeju2</li>
+    </ul>
+    <script>
+        $(function(){
+            //console.log($('li'));
+            //$('#dest > li').text('부산').css('color','red');    
+            //console.log($('li'));       
+            
+            var el = document.querySelectorAll('#dest > li');
+            for(var i = 0; i <el.length; i++){
+                el[i].textContent = '부산';
+                el[i].style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

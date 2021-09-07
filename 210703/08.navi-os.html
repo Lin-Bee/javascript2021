@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("현재 사용 중인 os는 " + navigator.platform);
+        console.log("기본언어설정" + navigator.language);
+    </script>
+    <h3>쿠키(cookie)사용여부</h3>
+    <p>쿠키랑 세션이랑 쿠키허용안되면 로그인 안될 수 있어서 함</p>
+    <script>
+        document.write("현재 브라우저는 쿠키를");
+        if (navigator.cookieEnabled){
+            document.write("사용ㅇ할수있습니다.");
+        }else{
+            document.write("사용할수 없습니다.");
+        }
+    </script>
+</body>
+</html>

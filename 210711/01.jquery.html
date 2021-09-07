@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="main-heading">What is jquery</h1>
+    <p>제이쿼리는 가장 유명한 자바스크립트 라이브러리이죠</p>
+    <h1>왜 제이쿼리를쓰나욤</h1>
+    <p class="note">노트: 제이쿼리 함수는 돔 api에서 사용할때 <code>document.getElements</code></p>
+    <script>
+        var elem = document.getElementsByTagName('h1')[0]; // 첫번째 h1을 선택하는 자바스크립트
+        elem.innerHTML = 'changetest';   //html까지 지원 - 자바스크립트
+        elem.textContent = 'changeTest'; //텍스트만 지원 - 자바스크립트
+
+        var elem1 = document.getElementsByTagName('h1');
+        for(var i=0; i < elem.length; i++){
+            elem1[i].innerHTML = 'test'+i;
+        }
+
+        //jQuery구문이라면
+        $('h1').text('test'); //$(선택자).동작함수();
+
+        //ES3
+        window.onload = function(){
+            //.....
+        }
+        //JQuery 단축
+        $(document).ready(function(){ //$(객체).메서드(함수(){   ....   });
+            var textelem = 'test';
+            $('#main-heading').text(textelem);
+            //$(선택자).동작함수();
+            // = 
+            //jQuery(선택자).동작함수();
+        });
+
+        $(function(){
+
+        });
+    </script>
+</body>
+</html>

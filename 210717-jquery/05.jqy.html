@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>선택자</h1>
+    <form action="">
+        <fieldset>
+            <label for=""><input type="checkbox" name="lecture" value="html" /> <span>HTML</span></label>
+            <label for=""><input type="checkbox" name="lecture" value="css"/> <span>CSS</span></label>
+            <label for=""><input type="checkbox" name="lecture" value="javascript"/> <span>javascript</span></label>
+            <label for=""><input type="checkbox" name="lecture" value="jquery"/> <span>jquery</span></label>
+        </fieldset>
+    </form>
+    <button id="btn02">필터링</button>
+    <p id="len"></p>
+    <script>
+        $(function(){
+            $("#btn02").on("click",function(){
+                $(":checked").next().text("이 글이 선택된 녀석이다.");
+                //:button type 이 버튼인 요소 모두선택
+                //:image type 이 이미지인것
+                //:radio type이 radio인것
+                //:text,:selectedd, :focus
+                $("input").not(":checked").attr('disabled', true);
+                //인풋의 체크되지 않은 분들을 다 disabled로 설정함
+            });
+        });
+    </script>
+</body>
+</html>

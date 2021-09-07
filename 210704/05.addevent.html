@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>대상객체.addEventListener(이벤트명,실행할이벤트리스너, 이벤트전파방식)</h2>
+    <button id="btn">텍스트보여주</button>
+    <p id="text"></p>
+    <script>
+        var showBtn = document.getElementById("btn");
+        showBtn.addEventListener("click",showText);
+        function showText(){
+            document.getElementById("text").innerHTML="텍스트는 등장했다!";
+        }
+    </script>
+</body>
+</html>

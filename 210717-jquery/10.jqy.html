@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        div{margin:10opx;}
+        .content{border:2px solid #333;}
+        .wrapper{border:2px solid red;}
+    </style>
+    <div class="content">첫번째컨텐츠입니다.</div>
+    <div class="content">두번째컨텐츠입니다.</div>
+
+    <button id="btn1">요소추가가</button>
+    <script>
+        $(function(){
+            $("#btn1").on("click",function(){
+                //$(".content").wrap("<div class='wrapper'></div>");
+                $(".content").wrapInner("<div class='wrapper'></div>");
+                $(".content").wrapAll("<div class='wrapper'></div>");
+            })
+        })
+    </script>
+</body>
+</html>

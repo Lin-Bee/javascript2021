@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text"></p>
+    <script>
+        //let url = 'https://www.naver.com';
+        //let regexp1 = /^https/; //^첫번째문자열이 ^뒤의 문자일때
+        //console.log(regexp1.test(url));
+
+        let fildName = "index.html";
+        let regexp2 = /html$/; //
+        console.log(regexp2.test(fildName));
+
+        let numStr = '1234567894';
+        let regexp3 = /^\d+$/;//
+        console.log(regexp3.test(numStr));
+
+        //회원아이다검사하기
+        //알파벳 대소문자 혹은 숫자로 시작하고 4~10자리인지 확인하기
+
+        let userId = 'abc098';
+        let regexp4 = /^[A-Za-z0-9]{4,10}$/;
+        console.log(regexp4.test(userId));
+
+        let cp ="010-1234-8546";
+        let regexp5 = /^\d{3,4}-\d{3,4}-\d{4}/;
+        console.log(regexp5.test(cp));
+
+        let email ="test12@naver.com";
+        let regexp6 = /^[A-Za-z0-9]([-_\.]?[A-Za-z0-9])*@[A-Za-z0-9]+([-_\.]?[A-Za-z0-9])*\.[A-Za-z0-9]+([-_\.]?[A-Za-z]{2,3}$)/;
+        console.log(regexp6.test(email));
+
+        let privacyNum ="900000-0456813";
+        let regexp7 = /^\d{6}-\d{6}/;
+        console.log(regexp7.test(cp));
+        
+    </script>
+</body>
+</html>

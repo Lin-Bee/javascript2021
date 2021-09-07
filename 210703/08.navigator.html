@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>이게 뭔지 알려주는겅 어떤 브라우저인지 </h3>
+
+    <script>
+        document.write("현재 사용 중인 브라우저의 이름은 " + navigator.appName + "입니다.<br>");//Netscape
+        document.write("또한, 해당 브라우저의 코드명은 " + navigator.appCodeName + "입니다.");//Mozilla
+        //브라우저 호환성으로 인해 대충 저렇게 다 똑같이 보임....
+        //사용 안함
+
+        document.write("현재 사용 중인 브라우저의 이름은 " + navigator.appVersion + "입니다.<br>");//Netscape
+        document.write("또한, 해당 브라우저의 코드명은 " + navigator.userAgent + "입니다.");//Mozilla
+        //사용함
+      </script>
+</body>
+</html>

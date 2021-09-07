@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity=""></script>
+</head>
+<body>
+    <h1>test1</h1>
+    <h2>test2</h2>
+    <p>p tag blabla~</p>
+    <ul id="dest">
+        <li>seoul</li>
+        <li>
+            <ul id="france">
+                <li class="promo">paris</li>
+            </ul>
+        </li>
+        <li class="promo1">jeju</li>
+        <li>테스트1</li>
+        <li>테스트2</li>
+        <li>테스트3</li>
+        <li>테스트4</li>
+        <li>테스트5</li>
+    </ul>
+    <script>
+        $(function(){
+            $('#france > li.promo').text('파리');   
+            
+            //es3
+            var test = document.querySelectorAll('#france > li');
+            for(var i = 0; i < test.length; i++){
+
+            }
+
+            $('#dest li:odd').css('color','pink');
+            $('#dest li:even').css('color','green');
+
+            $('#dest li:first').css('color','red');
+            $('#dest li:last').css('color','blue'); 
+            //es3
+            //var el = document.getElementById('dest');
+            //el.firstChild.style.color = 'red';
+            //el.lastChild.style.color = 'blue';  
+
+        });
+    </script>
+</body>
+</html>

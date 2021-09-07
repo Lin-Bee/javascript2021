@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=p, initial-scale=p">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="">
+        <label for=""><input type="checkbox" name="lecture" value="html"/>HTML</label>
+        <label for=""><input type="checkbox" name="lecture" value="jquery"/>jquery</label>
+    </form>
+    <button id="btn1">인풋추가</button>
+    <button id="btn2">인풋체크삭제</button>
+    <script>
+        $(function() {
+            $("#btn1").on("click",function(){
+                $("input[value='jquery']").prop({
+                    checked: true
+                });
+            });
+            $("#btn2").on("click",function(){
+                $("input[value='jquery']").removeProp({
+                    checked: false
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <style>
+        .lined{border-bottom:1px solid #333;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/html">HTML</a></li>
+        <li><a href="/CSS">CSS</a></li>
+    </ul>
+    <p id="text"></p>
+    <button id="btn1">작동중지시키기</button>
+    <button id="btn2">append시키기</button>
+    <script>
+        $(function(){
+            $("ul").on("click", "a" , function(){
+                event.preventDefault();
+                console.log("작동중지");
+            });
+            $("#btn2").one("click", function(){
+                $("ul").append("<li><a href=\"/CSS\">네이버</a></li>");
+            });
+        });
+    </script>
+</body>
+</html>

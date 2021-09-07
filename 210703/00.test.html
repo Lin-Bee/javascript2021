@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>아래 문제풀기</h1>
+    <div id = "namebox">김나경, 김보은, 황치열, 정송화, 김대영, 이승엽, 김나경, 이재현,
+        김나연, 황치열, 윤철원, 원진, 김상윤, 김동욱</div>
+    <ul>
+        <li>김씨와 정씨는 각각 몇 명 인가요?
+        </li>
+        <li>황치열 이라는 이름이 몇번 반복되나요?</li>
+        <li>중복을 제거한 이름을 출력하세요</li>
+        <li>중복을 제거한 이름을 오름차순으로 정렬하여 출력하세요</li>
+    </ul>
+    <script>
+        //ES3
+        //var input = '김나경,김보은,황치열,정송화,김대영,이승엽,김나경,이재현,김나연,황치열,윤철원,원진,김상윤,김동욱';
+        //var arr = input.split(',');
+        //var kim = 0, jung = 0;
+        //var obj = {};
+        //for(var i = 0; i < arr.length; i++){
+        //    if(obj[arr[i]] === undefined){
+        //        obj[arr[i]] = 1;
+        //    } else{
+        //        obj[arr[i]]++;
+        //    }
+        //    if (arr[i].substring(0,1) === '김'){
+        //        kim++;
+        //    }else if (arr[i].substring(0,1) === '정'){
+        //        jung++;
+        //    }
+        //}
+        //console.log('김씨' + kim);
+        //console.log('정씨' + jung);
+        //console.log('황치열 이름반복 count'+obj['황치열']);
+        //console.log(Object.keys(obj).join(','));
+        //console.log(Object.keys(obj).sort().join(','));
+
+        //ES6
+        let input = '김나경,김보은,황치열,정송화,김대영,이승엽,김나경,이재현,김나연,황치열,윤철원,원진,김상윤,김동욱';
+        let Names = function(str){
+            this.array = str.split(',');
+        };
+
+        Names.prototype.countLName = function(str){
+            return this.array.map(v => v.startWith(str) ? 1 : 0).reduce((a,b) => a+b, 0);
+        };
+
+        Names.prototype.countName = function(str){
+            return this.array.map(v => v === str ? 1:0).reduce((a,b => a+b, 0));
+        };
+
+        Names.prototype.getUniq = function(opt){
+            let array = Array.from(new Set(this.array));
+            return opt && opt.sort ? array.sort().join(",") : array.join(",");
+        };
+
+        let names = new Names(input);
+
+        console.log(names.countLName("김"));
+        console.log(names.countLName("정"));
+        console.log(names.countName("황치열"));
+        console.log(names.getUniq());
+        console.log(names.getUniq({sort:true}));
+    </script>
+</body>
+</html>

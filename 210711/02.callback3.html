@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity=""></script>
+</head>
+<body>
+    <script>
+        function person(name){
+            this.name = name;
+        }
+        person.prototype.newCallback = function(callback){
+            if(typeof callback == 'function'){
+                //callback.call(this);
+                //this가 바인드된 새로운 함수 호출
+                callback.bind(this)();
+
+                //넘겨받은게 function이란걸 인식해라! ㅇ0ㅇ!!!
+            }
+        };
+
+        var who = new person('홍길동');
+        who.newCallback(function(){
+            console.log('어떤 this가 바인딩?',this.name);
+        });
+
+        function test(){
+            console.log('어떤 this가 바인징 되었는가?' ,this.name);
+        } //바인딩은 this까지 같이 값이 넘어와지는것
+    </script>
+</body>
+</html>

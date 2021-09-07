@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>선택자</h1>
+    <ul>
+        <li>첫번째입니다</li>
+        <li><span>세컨드</span> 이므니다</li>
+        <li>삼번입니다</li>
+    </ul>
+    <button id="btn01">필터링이란</button>
+    <p id="len"></p>
+    <script>
+        let items = $("li");
+        $(function(){
+            $("#btn01").on("click",function(){
+                $("li:has(span)").text("여기에 span태그가 있습니다.");
+                //:eq(n) 선택요소 중에 인덱스가 n인것
+                //:empty 선택한 요소 중 자식요소를 가지고 있지 않는 요소
+                //:first :last
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <ul>
+        <li id="one">첫번째 아이템</li>
+        <li id="two">두번째 아이템</li>
+        <li id="three">세번째 아이템</li>
+        <li id="four">네번째 아이템</li>
+    </ul>
+    <p id="text"></p>
+    <button id="btn01">기능</button>
+    <script>
+        $(function(){
+            $("#btn01").on("click", function(){ //btn을 클릭했을때
+                let ids = $("li").map(function(){ //li의 map(불러올값)을 id로 반환해라
+                    return this.id;
+                })
+                .get() //반환된 값을 가지고와서 
+                .join(); //적용해라
+                $("#text").html(ids); // 적용된 값을 p에 출력해라
+            });
+        });
+    </script>
+</body>
+</html>

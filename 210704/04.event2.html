@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">이 문자열은 html문서가 로드되면 다른 문자열로 바뀝니다.</p>
+    <script>
+        window.onload = function(){
+            var text = document.getElementById("text");
+            text.innerHTML = "html문서가 로드되었습니다."
+
+            setTimeout(function() {
+                text.innerHTML = "html문서가 로드2되었습니다."
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

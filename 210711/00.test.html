@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity=""></script>
+</head>
+<body>
+    <script>
+        var test = {
+            name: '치열',
+            gender: '남자'
+        }
+        console.log(test);
+
+        function changeName(name, gender){
+            this.name = name;
+            this.gender = gender;
+        }
+
+        var me = new changeName('길동','남자');
+        console.log(me);
+
+        var you = new changeName('영희','여자');
+        console.log(you);
+    </script>
+</body>
+</html>

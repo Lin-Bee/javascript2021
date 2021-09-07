@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    브라우저 history 객체 (검색이나 무언가를 할때)
+    <h1>히스토리 목록의 갯수</h1>
+    <p>아래 버튼을 눌러 새로운 문서를 연후에 브라우저의 뒤로가기 버튼을 눌러보세요</p>
+    <button onclick="openDocument()">새로운문서 열기</button>
+    <button onclick="location.assign('00.test.html');">새로운문서 열기</button>
+    <p id="text"></p>
+
+    <script>
+        function openDocument(){
+            location.assign("/Users/ITPS/Desktop/주말/210703/06.historyback.html");
+        }
+        document.getElementById("text").innerHTML='현재브러우저 히스토리 목록의 갯수는' + history.length +'개입니다';
+    </script>
+</body>
+</html>

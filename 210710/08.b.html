@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>특수문자'\b'</h1>
+    <p id="text"></p>
+
+    <script>
+        var text = document.getElementById("text");
+        var targetStr1 = "abc123abc";
+        var targetStr2 = "abc 123 abc";
+        var targetStr3 = "abc@123!abc";
+
+        //단어의 매 ㄴ앞이나 맨 뒤에 부분 문자열 bc가 존제하는지 검색
+        var reg = /bc\b/;
+        text.innerHTML = targetStr1.search(reg);
+        text.innerHTML += targetStr2.search(reg);
+        text.innerHTML += targetStr3.search(reg);
+    </script>
+</body>
+</html>

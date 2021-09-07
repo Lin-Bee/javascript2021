@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="div" class="Box">
+        <!--p id="para">p요소</p>
+        <h1>요소의 위치정보</h1>
+        <p id="text"></p>
+        <button id="btn1">기능</button>
+        <p id="text"></p-->
+    </div>
+
+    <style>
+        #scroll {
+          width: 200px;
+          height: 200px;
+          overflow: auto;
+          margin-bottom: 20px;
+        }
+      </style>
+    <div id="scroll">
+        내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목
+        내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목
+        내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목
+        내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목
+        내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목
+        내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목
+        내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목내용이 내용내용 제목은 제목제목
+    </div>
+    <button id="btn1">기능</button>
+    <p id="text"></p>
+    <script>
+        $(function(){
+            $("#btn1").on("click",function(){
+                //let paraPosi = $("#para").offset();
+                //$("#para").offset({top:300, left:500}); //윈도우 기준 위치
+
+                //let paraPosi = $("#para").position();
+                //$("#para").position({top:200, left:500}); //원래 요소 기준 위치
+
+                 //스크롤 기준
+                $("#scroll").scrollLeft();
+                $("#scroll").scrollTop();
+            });
+        });
+    </script>
+</body>
+</html>

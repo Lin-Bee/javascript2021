@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>텍스트 노드의 데이터 교채</h1>
+    <p id="text">지금 시간은 오후 3시입니다</p>
+    <button onclick="changeText()">텍스트교체</button>
+    <script>
+        //dom 노드객체의 요소를 잡아서 해야함
+        var text = document.getElementById("text").firstChild;
+
+        function changeText(){
+            text.replaceData(7,4,"저녁 7")
+            //텍스트노드의 7번째 문자부터 4개를 저녁 7로 교체함
+        }
+    </script>
+</body>
+</html>

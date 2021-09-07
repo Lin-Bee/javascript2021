@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>append</h1>
+    <button id="btn1">아이템추가</button>
+    <ul id="list">
+        <li>첫번째 아이템이엥요</li>
+        <li>두번째 아이템이엥요</li>
+        <li>세번째 아이템이엥요</li>
+    </ul>
+    <script>
+        $(function(){
+            $("#btn1").on("click", function(){
+                $("#list").append("<li>새로운 아이템이엥요</li>");
+                $("#list").prepend("<li>위에 새로운 아이템이엥요</li>");
+                //.append() 요소 마지막에 삽입
+                //.prepend() 요소 처음에 삽입
+                //.html() 해당요소에 html반환
+                //,text() 해당요소에 텍스트반환
+            });
+        });
+    </script>
+</body>
+</html>

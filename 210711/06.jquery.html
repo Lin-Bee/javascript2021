@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity=""></script>
+</head>
+<body>
+    <script>
+        var obj1 = {
+            name: '김',
+            callName : function(){
+                console.log(this.name);
+            }
+        }
+
+        var obj2 = {
+            name:'바ㅣㄱ'
+        }
+
+        obj2.callName = obj1.callName;
+
+        obj1.callName(); //김
+        obj2.callName(); //김
+    </script>
+</body>
+</html>

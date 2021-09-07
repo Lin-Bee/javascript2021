@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>특수문자</h1>
+    <p id="text"></p>
+
+    <script>
+        var text = document.getElementById('text');
+
+        var targetStr = "ab1bc2cd3de";
+        var reg1 = /Wd/;      //regular express - 무조건 슬래시(/)가 들어감
+        var reg2 = /[3-9]/;  //3부터 9까지 찾아라
+
+        text.innerHTML = targetStr.search(reg1);
+        text.innerHTML = targetStr.search(reg2);
+
+    </script>
+</body>
+</html>

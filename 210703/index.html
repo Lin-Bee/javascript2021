@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>브라우저의 가로크기가 1000pixel 이하일 경우 a.html이 열리고 이상일 경우 b.html이 열려라</h1>
+    <script>
+        var bw = window.outerWidth;
+        
+        if(bw <= 1000){
+            location.href = "a.html";
+        }else if(bw > 1000){
+            location.href = "b.html";
+        }
+        
+    </script>
+</body>
+</html>

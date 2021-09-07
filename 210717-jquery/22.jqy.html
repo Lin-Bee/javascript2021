@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <style>
+        .lined{border-bottom:1px solid #333;}
+    </style>
+</head>
+<body>
+    <h1>클래스의 확인</h1>
+    <p id="target" class="lined tb white color400">hasClass() 메소드를 사용해봅시다</p>
+    <button id="btn1">클래스확인</button>
+    <p id="text"></p>
+    <script>
+        $(function(){
+            $("#btn1").on("click", function(){
+                let res = $("#target").hassClass("lined");
+                if(res = true) {
+                    $("#text").text("클래스가있습니다.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

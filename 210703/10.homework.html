@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>직각 삼각형의 밑변이 x, 높이가 y일때 남은 변(대각선)의 길이를 구하는 객체 만들기</p>
+    
+    <script>
+        var param1 = prompt("X의 값을 입력하세요",);
+        var param2 = prompt("y의 값을 입력하세요",);
+        
+        function triangle(param1, param2){
+            var param1num = parseInt(param1);
+            var param2num = parseInt(param2);
+            var up1 = Math.pow(param1num,2);
+            var up2 = Math.pow(param2num,2);
+
+            return Math.sqrt(up1+up2);   
+        }
+        console.log(triangle(param1, param2));
+    </script>
+
+    <script>
+        //easy
+        //const computeLength = (x,y) => (x**2 + y**2)**0.5;
+        //console.log(computeLength(3,4));
+    </script>
+</body>
+</html>

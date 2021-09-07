@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="container">
+        <div class="first">첫번재</div>
+        <div class="content first">두번재</div>
+        <div class="content first">세번재</div>
+    </div>
+
+    <button id="btn-delete">삭제</button>
+    <button id="btn-update">복구</button>
+    <script>
+        $(function(){
+            let data;
+            $("#btn-delete").on("click",function(){
+               data = $(".content").detach();
+            });
+
+            $("#btn-update").on("click",function(){
+                data = $("#container").append(data);
+            });
+        });
+    </script>
+</body>
+</html>

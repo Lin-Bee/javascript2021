@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity=""></script>
+</head>
+<body>
+    <script>
+        //var value = 1;
+
+        //var obj = {
+        //    value: 100,
+        //    test: function(){
+        //        setTimeout(function(){
+        //            console.log("콜백에서의 this",this);             //window
+        //            console.log("콜백에서의 this.value",this.value); //1
+        //        },100);
+        //    }
+        //};
+        //obj.test();
+
+        var value = 1;
+
+        var obj = {
+            value: 100,
+            test: function(){
+                var that = this;
+                console.log("test메서드에서의 this",this);       //object
+                console.log("test메서드에서의 this.value",this); //object
+                function test1(){
+                    console.log("test1메서드에서의 this",this);       //window
+                    console.log("test1메서드에서의 this.value",this); //window
+                }
+                test1();
+            }
+        };
+        obj.test();
+    </script>    
+</body>
+</html>

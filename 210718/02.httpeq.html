@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sendRequest()">ajax</button>
+    <div id="resDiv"></div>
+    <script>
+        //var ajaxReq = new XMLHttpRequest();
+        //var ajaxReq1 = new ActiveXObject("Microsoft.XMLHTTP");
+        function sendRequest(){
+            var ajaxReq;
+
+            function createRequest(){
+                if(window.XMLHttpRequest){ //window열때 어떤건지 확인함
+                    return new XMLHttpRequest();
+                }else{
+                    return new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+
+
+            function receiveResponse(){ //다운받았을때 어떤일을하는지 정함
+                if(ajaxReq.readyState == XMLHttpRequest.DONE && ajaxReq.status == 200){
+                    console.log(ajaxReq);
+                    //STATE값이 변형되면     전송된 값이 완료되고 스테이터스가 200이면
+                    document.getElementById("resDiv").innerHTML = ajaxReq.response;
+                }
+
+            }
+            
+            ajaxReq = createRequest();
+            ajaxReq.onreadystatechange = receiveResponse;
+            ajaxReq.open("GET","./data.txt",true);
+            //post
+            ajaxReq.send();
+            //피들러 
+        }
+    </script>
+</body>
+</html>

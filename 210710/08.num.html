@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>정규 표현식의 괄호</h1>
+    <p id="text"></p>
+
+    <script>
+        var targetStr = "Hong Gil Dong";
+        var nameReg = /(\w+)\s(\w+)\s(\w+)/; //공백 문자를 기준으로 각 부분 문자열을 저장함
+        var engName = targetStr.replace(nameReg, "$2 $3 $1");
+        //첫번째 부분 문자열을 맨 마지막으로 위치
+        document.getElementById("text").innerHTML = engName;
+    </script>
+
+    <h1>split으로 만드는 길동홍</h1>
+    <p id="text2"></p>
+    <script>
+        var targetStr2 = "Hong Gil Dong";
+        splittest = targetStr2.split(' ');
+        splittest[1] + splittest[2] + splittest[0]
+        console.log(splittest);
+    </script>
+</body>
+</html>

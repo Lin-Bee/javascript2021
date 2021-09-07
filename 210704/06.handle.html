@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btn">클릭해서 순서를보세요</button>
+    <script>
+        btn.onclick = function(){
+            alert('1버튼클릭1');
+        };
+
+        btn.onclick = function(){
+            alert('1버튼클릭2');
+        };
+        btn.addEventListener('click',function(){
+            alert('2버튼클릭1');
+        });
+
+        btn.addEventListener('click',function(){
+            alert('2버튼클릭2');
+        });
+        
+    </script>
+</body>
+</html>

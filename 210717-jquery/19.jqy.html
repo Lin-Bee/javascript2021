@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=p, initial-scale=p">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>글자 <span id="word">크기</span> <strong id ="te">변경</strong></p>
+    <button id="btn1">기능</button>
+    <button id="btn2">기능</button>
+    <p id="text"></p>
+    <script>
+        $(function() {
+            $("#btn1").on("click",function(){
+                $("p").css({fontSize:"30px",backgroundColor:"yello"});
+                $("#word").attr("title", "attr이 추가된다").css("color","red");
+            });
+            $("#btn2").on("click",function(){
+                $("#te").removeAttr("title").css("color","black");
+            });
+        });
+    </script>
+</body>
+</html>

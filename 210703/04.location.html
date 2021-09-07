@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>현재 문사의 url 주소 가지고 오기</h1>
+    <p>현재문서의 호스트 이름은  입니다</p>
+    <button onclick="moveNaver()">네이버</button>
+    <button onclick="moveDaum()">다음</button>
+    <script>
+        console.log("현재 문서의 URL 주소는" + location.href + "입니다.");
+        console.log("현재 문서의 호스트 주소는" + location.hostname + "입니다.");
+        console.log("현재 문서의 경로명은" + location.pathname
+         + "입니다.");
+
+        function moveNaver(){
+            location.href = 'https://www.naver.com';
+        }
+    </script>
+</body>
+</html>

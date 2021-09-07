@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>strict 모드</h1>
+    <p id="text"> </p>  
+    <p>Strict Mode는 코드에 더 나은 오류 검사를 적용하는 방법입니다.
+        Strict Mode를 사용하면, 예를 들어 암시적으로 선언한 변수를 사용하거나
+        읽기 전용 속성에 값을 할당하거나 확장할 수 없는 개체에 속성을 추가할 수 없습니다</p>  
+    
+    <script>
+        "use strict" //전체 스크립트를 strict 모드로 설정함.
+        try {
+            num = 123; //선언되지 않은 변수를 사용했으므로 에러 발생
+        } catch (error) {
+            document.getElementById("text").innerHTML = error.name + '<br/>';
+            document.getElementById("text").innerHTML += error.message;
+        }
+    </script>
+    <script>
+        ///'use strict';
+
+       // var x =1;
+       // delete x;
+       // function test(y){
+       //     delete y;
+       // } //만들어진걸삭제하는순간 오류발생
+       //매개변수가 겹쳐도 오류가 남
+       //함수값은 가능하면 두단어 이상이 합쳐진거하용하기
+
+    </script>
+</body>
+</html>

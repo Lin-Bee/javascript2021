@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity=""></script>
+</head>
+<body>
+    <h1>test1</h1>
+    <h2>test2</h2>
+    <p>p tag blabla~</p>
+    <ul id="dest">
+        <li>seoul</li>
+        <li>부산</li>
+        <li class="promo">jeju</li>
+        <li class="promo1">jeju2</li>
+    </ul>
+    <script>
+        $(function(){
+            console.log($('li'));
+            $('li').text('부산');
+            $('#dest .promo').text('서울');    
+        //  = ES3일 경우
+        //  var el = document.querySelectorAll('#dest .promo');
+        //  for(var i = 0; i<el.length; i++){
+        //     el[i].textContent = '서울'
+        //  }
+            $('#dest').children('.promo1').text('제쥬');            
+        });
+    </script>
+</body>
+</html>

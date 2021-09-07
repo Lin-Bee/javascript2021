@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>버튼하나에 여러가지 기능을 줍시다.</p>
+    <button id = "btn">버튼</button>
+    <p id="text"></p>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click",clickBtn);
+        btn.addEventListener("mouseover",mouseoverBtn);
+        btn.addEventListener("mouseout",mouseoutBtn);
+
+        function clickBtn(){
+            document.getElementById("text").innerHTML="버튼이 클릭되었다.";
+        }
+        function mouseoverBtn(){
+            document.getElementById("text").innerHTML="버튼에 올라갔다.";
+        }
+        function mouseoutBtn(){
+            document.getElementById("text").innerHTML="버튼에서 내려갔다.";
+        }
+    </script>
+</body>
+</html>

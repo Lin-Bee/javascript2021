@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>alert() - 잘 안씀</p>
+    <button onclick="alertDialogBox()">알렛입니다.</button>
+    <script>
+        function alertDialogBox(){
+            alert("확인을 누를때까지 다른 작업을 할 수 없음");
+            location.href="https://www.naver/com";
+        }
+    </script>
+
+    <p>confirm() - 잘 안씀</p>
+    <button onclick="confrimDialogBox()">너는 무엇을 눌렀니</button>
+    <p id="text"></p>
+    <script>
+        function confrimDialogBox(){
+            if(confrim("두가지 선택권이 있습니다") == true){
+                str = "당신은 확인을 눌렀습니다.";
+            } else {
+                str = "당신은 취소을 눌렀습니다.";
+            }
+            document.getElementById("text").innerHTML = str;
+        }
+    </script>
+
+    <p>prompt() 메소드</p>
+    <button onclick="promptDialogBox()">값을 입력해라</button>
+    <p id="text2"></p>
+    <script>
+        function promptDialogBox(){
+            var inputStr = prompt("당신의 이름을 입력해라","이름을 안넣었다");
+            
+            if(inputStr != null){
+                document.getElementById("text2").innerHTML = "당신의 이름은" + inputStr +"이다";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <ul id="list">
+        <li class="first content">첫번째 아이템이엥요</li>
+        <li class="second content">두번째 아이템이엥요</li>
+        <li class="third content">세번째 아이템이엥요</li>
+    </ul>
+
+    <button id="btn-delete">삭제</button>
+    <script>
+        $(function(){
+            $("#btn-delete").on("click",function(){
+                //$("#firstItem").replaceAll(".item");
+                //뒤에 추가딤
+                $(".content").remove(".first, .third");
+            });
+        })
+    </script>
+</body>
+</html>

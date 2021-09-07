@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="blur">1부터 10,000까지 5라는 숫자가 몇번이 나오나요</p>
+    <style>
+        .blur{color:transparent;
+        text-shadow: 0 0 5px rgba(0,0,0,0.8);}
+    </style>
+    <script>
+        var count = 0;
+        var str;
+        for(var i = 1; i <= 10000; i++){
+            str = String(i);
+            for(var j=0; j<str.length; j++){
+                if(str[j] === "5"){
+                    cnt++;
+                }
+            }
+        }//4000
+        console.log(cnt);
+    </script>
+    <script>
+       let Num1 = Array.from({length:10000}, (a,b) => b+1).join().split('').filter(n=>n==="5").length;
+       console.log(Num1);
+
+       let Num2 = Array.from({length:10000}, (a,b) => b+1).join().split('8').length-1;
+       console.log(Num2);
+      
+    </script>
+</body>
+</html>

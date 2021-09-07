@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sendRequest()">ajax</button>
+    <div id="statusDiv"></div>
+    <div id="resDiv"></div>
+    <script>
+        function sendRequest(){
+            var ajaxReq = new XMLHttpRequest();
+            var currentState = "";
+            ajaxReq.onreadystatechange = function(){
+                switch (ajaxReq.readyState){
+                    case XMLHttpRequest.UNSET:
+                    currentState += "XMLHttpRequest 객체상태 : UNSET <br/>";
+                    break;
+                    case XMLHttpRequest.OPENED:
+                    currentState += "XMLHttpRequest 객체상태 : OPENED <br/>";
+                    break;
+                    case XMLHttpRequest.HEADERS_RECEIVED:
+                    currentState += "XMLHttpRequest 객체상태 : HEADERS_RECEIVED <br/>";
+                    break;
+                    case XMLHttpRequest.LOADING:
+                    currentState += "XMLHttpRequest 객체상태 : LOADING <br/>";
+                    break;
+                    case XMLHttpRequest.DONE:
+                    currentState += "XMLHttpRequest 객체상태 : DONE <br/>";
+                    break;
+                }
+                document.getElementById("statusDiv").innerHTML = currentState;
+
+                if(ajaxReq.readyState == XMLHttpRequest.DONE && ajaxReq.status == 200){
+                    document.getElementById("resDiv").innerHTML = ajaxReq.response;
+                }
+            };
+            ajaxReq.open("GET","./data.txt",true);
+            ajaxReq.setRequestHeader("headerFake", "cyhwang");
+            ajaxReq.send();
+        }
+    </script>
+</body>
+</html>

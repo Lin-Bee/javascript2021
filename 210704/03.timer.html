@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>setTimeout()</p>
+    <button onclick="startTimeout()">2초 뒤에 현재시간을 표시합니다.</button>
+    <button onclick="startInterval()">2초 마다 현재시간을 표시합니다.</button>
+    <p id="date"></p>
+    <p id="date2"></p>
+
+    <script>
+        function startTimeout(){
+            setTimeout(printCurrentDate,2000);
+        }
+        function printCurrentDate(){
+            document.getElementById("date").innerHTML = new Date();
+        }
+    </script>
+    <script>
+        function startInterval(){
+            setInterval(printCurrentDate2,2000);
+        }
+        function printCurrentDate2(){
+            document.getElementById("date2").innerHTML = new Date();
+        }
+    </script>
+</body>
+</html>

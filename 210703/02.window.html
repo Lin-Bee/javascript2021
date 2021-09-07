@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        이상한 익스
+        // 기본 문법
+        window.innerHeight
+        window.innerWidth
+        // 익스플로러 5부터 7버전만을 위한 문법 1
+        document.documentElement.clientHeight
+        document.documentElement.clientWidth
+        // 익스플로러 5부터 7버전만을 위한 문법 2
+        document.body.clientHeight
+        document.body.clientWidth
+    </div>
+    <script>
+        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        document.write("웹 브라우저의 너비는"  + windowWidth +"픽셀이고, 높이는" +windowHeight +"픽셀입니다.")
+    </script>
+</body>
+</html>
